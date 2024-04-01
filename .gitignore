@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+converter/*.exe
+converter/*.out
+converter/*.o
+converter/*.so
+converter/convert
