@@ -9,7 +9,7 @@ void setup() {
   delay(1000);
   
   Serial.print("Pulses: ");
-    for (int j = 0; j < sizeof(pulses) ; j++) {
+    for (int j = 0; j < (sizeof(pulses)/sizeof(pulses[0])) ; j++) {
       Serial.print(pulses[j]);
       Serial.print(", ");
     }
@@ -18,7 +18,7 @@ void setup() {
 
 void sendData(){
 		bool onoff = false;
-		for(int i = 0; i < sizeof(pulses); i++){
+		for(int i = 0; i < (sizeof(pulses)/sizeof(pulses[0])); i++){
 				digitalWrite(13,!onoff);
 				delayMicroseconds(pulses[i]);
 				onoff = !onoff;

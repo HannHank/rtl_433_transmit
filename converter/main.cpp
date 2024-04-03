@@ -205,9 +205,9 @@ int main(int argc, char *argv[]) {
     // split string by +
     char *p = strtok((char *)data.c_str(), "+");
     while (p != NULL) {
-      int size = getSizeCode(data);
+      int size = getSizeCode(p);
       int s[size];
-      getCodePulses(data, s);
+      getCodePulses(p, s);
       cout << "Size: " << size << endl;
       cout << "Pulses: ";
       for (int j = 0; j < size; j++) {
